@@ -36,7 +36,7 @@ const vi = {
   },
   projects: {
     title: "Dự án",
-    description: "Một vài thứ mình đã làm.",
+    description: "Một vài thứ nhỏ nhỏ mình mới làm gần đây.",
     empty: "Chưa có dự án nào, sẽ cập nhật sớm.",
     visit: "Xem",
   },
