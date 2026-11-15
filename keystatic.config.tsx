@@ -263,25 +263,24 @@ export default config({
   ui: {
     brand: {
       name: "Row · Blog",
-      mark: ({ colorScheme }) => (
-        <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden>
-          <rect
-            width="26"
-            height="26"
-            rx="7"
-            fill={colorScheme === "dark" ? "#1b1f33" : "#14142b"}
-          />
-          <text
-            x="13"
-            y="17.5"
-            textAnchor="middle"
-            fontFamily="ui-monospace, monospace"
-            fontSize="12"
-            fontWeight="700"
-            fill="#22d3ee"
-          >
-            ~/
-          </text>
+      // Logo dự án (chữ M), cùng hình với src/app/icon.svg
+      mark: () => (
+        <svg width="26" height="26" viewBox="0 0 64 64" aria-hidden>
+          <defs>
+            <linearGradient id="kr-frame" x1="4" y1="4" x2="60" y2="60" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stopColor="#a78bfa" />
+              <stop offset="0.55" stopColor="#22d3ee" />
+              <stop offset="1" stopColor="#f472b6" />
+            </linearGradient>
+            <linearGradient id="kr-mark" x1="14" y1="16" x2="50" y2="50" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stopColor="#b9a6ff" />
+              <stop offset="0.5" stopColor="#22d3ee" />
+              <stop offset="1" stopColor="#ff7ab8" />
+            </linearGradient>
+          </defs>
+          <rect width="64" height="64" rx="15" fill="#0b0d14" />
+          <rect x="1.5" y="1.5" width="61" height="61" rx="13.5" fill="none" stroke="url(#kr-frame)" strokeOpacity="0.6" strokeWidth="3" />
+          <path d="M16.5 46.5V18l15.5 17L47.5 18v28.5" fill="none" stroke="url(#kr-mark)" strokeWidth="7.5" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       ),
     },
